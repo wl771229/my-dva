@@ -1,7 +1,8 @@
 import dva from 'dva';
 import './index.css';
 import routers from './routers'
-import models from './models'
+import models from './models/index'
+import login from './models/login'
 
 import createHistory from 'history/createBrowserHistory';
 const app = dva({
@@ -14,6 +15,7 @@ const app = dva({
 
 // 3. Model
 app.model(models);
+app.model(login);
 
 // 4. Router
 app.router(routers);

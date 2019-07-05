@@ -8,6 +8,7 @@ import {Router,Route,NavLink,Redirect,Switch} from 'dva/router';
 // const Home = () => <h1>你好</h1>;
 import Home from '../components/Home'
 import My from '../components/My'
+import Login from '../components/Login'
 
 
 let fn = function ({history,app}) {
@@ -15,7 +16,8 @@ let fn = function ({history,app}) {
     <Router history={history}>
       <React.Fragment>
         <Switch>
-          <Route path='/' exact  component={Home} />
+          <Route path='/' exact  component={Login} />
+          <Route path='/home' exact  component={Home} />
           <Route path='/my'  component={My} />
         </Switch>
       </React.Fragment>

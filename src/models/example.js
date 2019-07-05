@@ -15,7 +15,7 @@ export default {
       yield put({ type: 'save' });
     },
   },
-
+  //更新state
   reducers: {
     save(state, action) {
       return { ...state, ...action.payload };

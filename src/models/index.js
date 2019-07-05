@@ -18,6 +18,7 @@ export default  {
 
   reducers: {
     addNum(state, {payload}) {
+
       return {
         num:state.num+payload.num
       };
